@@ -1,15 +1,23 @@
  #include <stdio.h>
+ void swap(int *a,int *b)
+{
+	int temp;
+	temp=*a;
+	*a=*b;
+	*b=temp;
+}
 int main(void)
 {
  	int i,j;
-	int a[10]={2,4,7,8,1,6,5,3,9,0};
-	for(i=0;i<10;i++)
+	int a[6]={5,2,6,4,10,20};
+	for(i=0;i<6;i++)
 	{
-		for(j=0;j<10-i;j++)
+		for(j=0;j<6-i;j++)
 		{
 			if(a[j]>a[j+1])
 			{
-				int flag;
+				swap(&a[j],&a[j+1]);
+			/*	int flag;
 				flag=a[j];
 				a[j]=a[j+1];
 				a[j+1]=flag;/* ½»»»a[j]ºÍa[j+1] 
@@ -19,7 +27,7 @@ int main(void)
 			}		
 		} 
 	}  
-	for(int i=0;i<10;i++)
+	for(int i=0;i<6;i++)
 	{
 		printf("%d",a[i]);
 	}

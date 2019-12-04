@@ -13,9 +13,10 @@
 int main() {
     int m;
     //两个较小数另外处理
+    scanf("%d",&m);
     if (m == 2 || m == 3)
         return 1;
-    scanf("%d",&m);
+    
     //不在6的倍数两侧的一定不是质数
     if (m % 6 != 1 && m % 6 != 5) {
         printf("不是素数"); 
